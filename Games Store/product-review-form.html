@@ -1,0 +1,49 @@
+<!--LEVEL 5-->
+<!-- Review Form Panel -->
+<form name="reviewForm" 
+      ng-submit="reviewForm.$valid && reviewCtrl.addReview(product)" novalidate>
+
+    <!--Reviews that are already in the array-->
+    <ul>
+        <h4>Reviews</h4>
+        <li ng-repeat="review in product.reviews">
+            <h5>
+                <strong>{{review.stars}} Stars</strong>
+                {{review.body}}
+                <cite>{{review.author}} on {{review.createdOn | date}}</cite>
+            </h5>
+        </li>    
+    </ul>
+
+    <!--Live Preview-->
+    <h5>
+        <strong>{{reviewCtrl.review.stars}} Stars</strong>
+        {{reviewCtrl.review.body}}
+        <cite class="clearfix">- {{reviewCtrl.review.author}}</cite>    
+    </h5>
+
+    <!--Rating section-->
+    <fieldset class="form-group">
+        <select ng-model="reviewCtrl.review.stars" class="form-control" 
+                ng-options="stars for stars in [5,4,3,2,1]"  title="Stars" required>
+            <option value="">Rate the Product</option>
+        </select>    
+    </fieldset>
+
+    <!--Review body-->
+    <fieldset class="form-group">
+        <textarea ng-model="reviewCtrl.review.body" class="form-control" 
+                  placeholder="Write a short review of the product..." title="Review" required></textarea>              
+    </fieldset>
+
+    <!--author section-->
+    <fieldset class="form-group">
+        <input ng-model="reviewCtrl.review.author" type="email" class="form-control" 
+               placeholder="aziarkash@qualogy.com" title="Email" required />           
+    </fieldset>
+
+    <!--submit button-->
+    <fieldset class="form-group">
+        <input type="submit" class="btn btn-primary pull-right" value="Submit Review" />
+    </fieldset>
+</form>

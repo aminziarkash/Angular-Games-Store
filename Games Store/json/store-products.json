@@ -1,0 +1,74 @@
+[
+    {
+        "name": "Need for Speed Underground",
+        "price": 300,
+        "description": "Underground completely rebooted the franchise, ignoring the previous Need for Speed games",
+        "dateInStore" : "1203200349692",
+        "canPurchase": true,
+        "soldOut": false,
+        "images" : [
+            "images/nfs.jpg"
+        ],
+        "reviews": [
+            {
+                "stars": 5,
+                "body": "This game is awsome!",
+                "author": "a.ziarkash@qualogy.com"
+            }
+        ]
+    },
+    {
+        "name": "Call Of Duty Black Ops III",
+        "price": 49.95,
+        "description": "Underground completely rebooted the franchise, ignoring the previous Need for Speed games.",
+        "dateInStore" : "1493200349692",
+        "canPurchase": true,
+        "soldOut": false,
+        "images" : [
+            "images/bops3.jpg"
+        ],
+        "reviews": [
+            {
+                "stars": 3,
+                "body": "I really liked the zombies mode on this game!",
+                "author": "a.ziarkash@qualogy.com"
+            }
+        ]
+    },
+        {
+        "name": "FIFA 16",
+        "price": 56.95,
+        "description": "Underground completely rebooted the franchise, ignoring the previous Need for Speed games.",
+        "dateInStore" : "1493200349692",
+        "canPurchase": true,
+        "soldOut": false,
+        "images" : [
+            "images/fifa16.jpg"
+        ],
+        "reviews": [
+            {
+                "stars": 3,
+                "body": "I really liked the zombies mode on this game!",
+                "author": "a.ziarkash@qualogy.com"
+            }
+        ]
+    },
+        {
+        "name": "The Last Of Us",
+        "price": 59.95,
+        "description": "Underground completely rebooted the franchise, ignoring the previous Need for Speed games.",
+        "dateInStore" : "1493200349692",
+        "canPurchase": true,
+        "soldOut": false,
+        "images" : [
+            "images/thelastofus.jpg"
+        ],
+        "reviews": [
+            {
+                "stars": 3,
+                "body": "I really liked the zombies mode on this game!",
+                "author": "a.ziarkash@qualogy.com"
+            }
+        ]
+    }
+]

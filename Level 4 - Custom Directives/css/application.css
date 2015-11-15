@@ -1,0 +1,13 @@
+        
+.ng-invalid.ng-dirty {
+    border-color: #ff000c;
+}
+.ng-valid.ng-dirty {
+    border-color: #19ff37;
+}
+
+.list-group-item {
+    margin: 0 auto;
+    width:800px;
+    background-color:#bfdbe0
+}

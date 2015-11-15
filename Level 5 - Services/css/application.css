@@ -1,0 +1,41 @@
+        
+.ng-invalid.ng-dirty {
+    border-color: #ff000c;
+}
+.ng-valid.ng-dirty {
+    border-color: #19ff37;
+}
+
+.list-group-item {
+    margin: 0 auto;
+    width:800px;
+    background-color:#000000
+}
+
+p {
+    color:#ffffff
+}
+
+h3 {
+    color:#ffffff
+}
+
+.md-toolbar-tools {
+    background-color:#000000
+}
+
+.md-toolbar-tools h1 {
+  font-size: inherit;
+  font-weight: inherit;
+  margin: inherit;
+}
+
+md-sidenav.md-locked-open {
+  width: 150px !important;
+  min-width: 150px !important;
+  max-width: 150px !important;
+}
+
+md-sidenav{
+    background-color:#3b3b3b;
+}

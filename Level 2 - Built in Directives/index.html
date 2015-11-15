@@ -1,0 +1,62 @@
+<!--LEVEL 2-->
+<!DOCTYPE html>
+<html ng-app="store">
+    <head>
+        <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css" />
+        <script type="text/javascript" src="JavaScript/angular.min.js"></script>
+        <script type="text/javascript" src="JavaScript/app.js"></script>
+    </head>
+    
+    <body class="list-group" ng-controller="StoreController as store">
+
+        <!--Product Container-->
+        <div class="list-group-item" ng-repeat="product in store.products | orderBy:'price'">
+            <h3> {{product.name}} <em class="pull-right">{{product.price | currency}}</em></h3>
+            <h4> {{product.description}} </h4>
+            <p> Avaialbel in Gem Store from : {{product.dateInStore | date}}</p>
+            
+            <!--Image Gallery-->
+            <div class="gallery">
+                <div class="img-wrap">
+                    <img class="thumbnail" ng-src="{{product.images[0]}}"/>
+                </div>
+            </div>
+            
+            <section ng-controller="PanelController as panel">
+                <ul class="nav nav-pills">
+                    <li ng-class="{ active:panel.isSelected(1)}">
+                        <a href ng-click="panel.selectedTab(1)">Description</a> 
+                    </li>
+                    <li ng-class="{ active:panel.isSelected(2)}">
+                        <a href ng-click="panel.selectedTab(2)">Specifications</a>
+                    </li>
+                    <li ng-class="{ panel.isSelected(3)}">
+                        <a href ng-click="panel.selectedTab(3)">Reviews</a>
+                    </li>    
+                </ul>
+
+                {{tab}}
+                
+                <div class="panel" ng-show="panel.tab === 1">
+                    <h4>Description</h4>
+                    <p>{{product.description}}</p>
+                </div>
+                <div class="panel" ng-show="panel.tab === 2">
+                    <h4>Specifications</h4>
+                    <blockquote>None yet</blockquote>
+                </div>
+
+                <div class="panel" ng-show="panel.tab === 3">
+                    <h4>Reviews</h4>
+                    <blockquote>None yet</blockquote>
+                </div>
+
+                
+            </section>
+            
+            <!--The Add To Cart Button-->
+            <button ng-show="product.canPurchase"> Add To Cart </button>
+        
+        </div>
+    </body>
+</html>

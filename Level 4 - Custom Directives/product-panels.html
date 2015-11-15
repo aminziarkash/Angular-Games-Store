@@ -1,0 +1,31 @@
+<section>
+    <!--get product panels/tabs using Element directive with controller function in it-->
+    <ul class="nav nav-pills">
+        <li ng-class="{ active:panel.isSelected(1)}">
+            <a href ng-click="panel.selectedTab(1)">Description</a> 
+        </li>
+        <li ng-class="{ active:panel.isSelected(2)}">
+            <a href ng-click="panel.selectedTab(2)">Specifications</a>
+        </li>
+        <li ng-class="{ panel.isSelected(3)}">
+            <a href ng-click="panel.selectedTab(3)">Reviews</a>
+        </li>    
+    </ul>
+
+    <!--Description Tab-->
+    <div class="panel" ng-show="panel.isSelected(1)">
+        <!--get description using Attribute directive-->
+        <blockquote product-description></blockquote>    
+    </div>
+    
+    <!--Specifications Tab-->
+    <div class="panel" ng-show="panel.isSelected(2)">
+        <h4>Specifications</h4>
+        <h5>None yet</h5>        
+    </div>
+
+    <!--Reviews Tab-->
+    <div class="panel" ng-show="panel.isSelected(3)">
+        <blockquote product-review-form></blockquote>
+    </div>    
+</section>
